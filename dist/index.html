@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05080f">
+  <title>Blue Nebula — AI coding with your project in context</title>
+  <meta name="description" content="A local-first AI workspace for solo developers and small teams. Connect project memory, visual design, code, and checks. Try the interactive browser prototype.">
+  <meta property="og:title" content="Blue Nebula — AI coding with your project in context">
+  <meta property="og:description" content="Keep project decisions, visual design, code, and checks together. Explore the Blue Nebula prototype.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" sizes="200x200" href="/logo.png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="stylesheet" href="/scale.css">
+  <link rel="stylesheet" href="/home.css"><link rel="stylesheet" href="/paper.css">
+<link rel="stylesheet" href="/pitch.css">
+  <script type="module" src="/scale.js"></script><script type="module" src="/fx.js"></script>
+<script type="module" src="/pitch.js"></script>
+</head>
+<body><svg width="0" height="0" aria-hidden="true" style="position:absolute"><filter id="logo-key" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -1.5 0 0 0 1.35"/></filter></svg>
+<a class="skip-link" href="#main">Skip to content</a>
+<!--HEADER--><div class="progress" id="progress" aria-hidden="true"></div><header class="site-header" id="header"><div class="banner" id="banner"><span>Explore the interactive prototype. Edit a screen, inspect the code, run the checks.</span><a href="/prototype/">Open it <i aria-hidden="true">↗</i></a><button id="banner-x" aria-label="Dismiss announcement">×</button></div><div class="shell nav"><a class="brand" href="/" aria-label="Blue Nebula home"><span class="logo-crop"><img src="/logo.png" width="200" height="200" alt="Blue Nebula"></span></a><nav class="nav-links" aria-label="Main navigation"><div class="dd"><button class="dd-btn" aria-expanded="false" aria-haspopup="true">Product<i class="chev" aria-hidden="true"></i></button><div class="dd-panel"><a href="/product/"><i aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="12" cy="12" r="3"/></svg></i><span><b>Overview</b><small>The workspace, explained</small></span></a><a href="/prototype/"><i aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></i><span><b>Interactive prototype</b><small>Edit, inspect, and check</small></span></a><a href="/product/#development"><i aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h9"/></svg></i><span><b>Development status</b><small>Available now and planned</small></span></a></div></div><div class="dd"><button class="dd-btn" aria-expanded="false" aria-haspopup="true">How it works<i class="chev" aria-hidden="true"></i></button><div class="dd-panel"><a href="/how-it-works/"><i aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H14a3 3 0 013 3v6.5"/></svg></i><span><b>The workflow</b><small>Context to a reviewable change</small></span></a><a href="/why-local/"><i aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></i><span><b>Why local</b><small>Ownership and boundaries</small></span></a><a href="/why-local/#hardware"><i aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></i><span><b>Hardware guide</b><small>Proposed reference profiles</small></span></a></div></div><div class="dd"><button class="dd-btn" aria-expanded="false" aria-haspopup="true">Explore<i class="chev" aria-hidden="true"></i></button><div class="dd-panel"><a href="/#playground"><i aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l5-5 3 3 8-8M15 7h5v5"/></svg></i><span><b>Live playground</b><small>Run the workflow here</small></span></a><a href="/#roadmap"><i aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6"/></svg></i><span><b>Roadmap</b><small>A focused beginning</small></span></a><a download="Blue-Nebula-Product-Brief.md" href="/product-brief.md"><i aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/></svg></i><span><b>Product brief</b><small>Download the full idea</small></span></a></div></div></nav><a class="btn btn-primary btn-sm magnetic" href="/prototype/"><span>Open prototype</span><span class="arr">↗</span></a><button class="menu-btn" id="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div></header><nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="/product/">Product</a><a href="/how-it-works/">How it works</a><a href="/why-local/">Why local</a><a href="/#playground">Playground</a><a href="/prototype/">Open prototype ↗</a></nav><!--/HEADER-->
+
+<main id="main">
+  <div class="cine-wrap" data-theme="dark">
+  <section class="cine" id="top" aria-labelledby="hero-title">
+    <canvas id="hero-ribbon" aria-hidden="true"></canvas>
+    <div class="cine-vignette" aria-hidden="true"></div>
+    <div class="cine-copy">
+      
+      <h1 id="hero-title"><span class="line"><span>Build with AI.</span></span><span class="line"><span>Keep your context.</span></span></h1>
+      <p class="hero-sub">Your project’s <b id="rotator" aria-live="off">memory</b> stays connected, in a workspace designed to run on your machine.</p>
+      <div class="hero-actions"><a class="btn btn-primary magnetic" href="/prototype/"><span>Try the prototype</span><span class="arr">↗</span></a><a class="btn btn-ghost magnetic" href="#story"><span>See how it works</span><span class="arr">↓</span></a></div>
+    </div>
+    <div class="layer-panel" aria-label="The four layers">
+      
+      <h2>Memory. Design. Code. Checks.</h2>
+      <div class="lp-list">
+        <button class="lp-item" style="--c:#3de0b0"><i>01</i><span><b>Memory</b><small>Decisions with a source, scope and history.</small></span></button>
+        <button class="lp-item" style="--c:#78aaff"><i>02</i><span><b>Design</b><small>Editable screens tied to shared tokens.</small></span></button>
+        <button class="lp-item" style="--c:#a9c0ff"><i>03</i><span><b>Code</b><small>Readable changes you can compare and export.</small></span></button>
+        <button class="lp-item" style="--c:#ffb84d"><i>04</i><span><b>Checks</b><small>Named results you can run and inspect.</small></span></button>
+      </div>
+    </div>
+    <div class="cine-foot"><div class="ribbon-modes" role="group" aria-label="Explore the workspace illustration"><button data-mode="0" aria-pressed="true">Connected</button><button data-mode="1" aria-pressed="false">Explore layers <i aria-hidden="true">↗</i></button></div><span class="cine-hint">DRAG TO TURN · CLICK FOR A RIPPLE</span><a class="scroll-btn" href="#statement">Scroll to explore <i aria-hidden="true">↓</i></a></div>
+  </section>
+  </div>
+
+  <section class="demo" id="demo" data-theme="dark" aria-labelledby="demo-title">
+    <div class="shell">
+      <div class="demo-head"><h2 class="big words" id="demo-title" data-words>One edit. Four layers follow.</h2><p class="lede">Watch a heading change travel from the canvas into a readable diff, a named check and a project memory. Sample data, played back in your browser.</p></div>
+      <div class="win reveal" id="demo-win" data-stage="0" role="img" aria-label="Animated preview: a heading edited on the canvas appears as a code diff, passes three named checks and is recorded in project memory.">
+        <div class="win-bar"><span class="dots3" aria-hidden="true"><i></i><i></i><i></i></span><span>workspace / WelcomeCard.jsx</span><span class="tag">Sample data</span></div>
+        <div class="win-body" aria-hidden="true">
+          <div class="dp"><div class="dp-title"><b>Canvas</b><span>edit heading</span></div><div class="mock-card"><h4 id="demo-h">Welcome back.</h4><span>Open your project</span></div></div>
+          <div class="dp"><div class="dp-title"><b>Code</b><span>diff</span></div>
+            <div class="dl">  &lt;Card accent="blue" gap={16}&gt;</div>
+            <div class="dl del" data-s="2">-   &lt;h2&gt;Welcome back.&lt;/h2&gt;</div>
+            <div class="dl add" data-s="2">+   &lt;h2&gt;Ship the next idea.&lt;/h2&gt;</div>
+            <div class="dl">    &lt;Button&gt;Open your project&lt;/Button&gt;</div>
+            <div class="dl">  &lt;/Card&gt;</div>
+            <div class="mem" data-s="4">Memory saved<br>heading copy changed · WelcomeCard · tokens unchanged</div></div>
+          <div class="dp"><div class="dp-title"><b>Checks</b><span>named</span></div>
+            <div class="chk" data-s="3"><i>✓</i>heading is non-empty</div>
+            <div class="chk" data-s="3"><i>✓</i>spacing token valid</div>
+            <div class="chk" data-s="3"><i>✓</i>accent bound to token</div></div>
+        </div>
+      </div>
+      <div class="steps4" id="demo-steps"><span>1 · Edit</span><span>2 · Diff</span><span>3 · Check</span><span>4 · Remember</span><a class="btn btn-primary magnetic" href="/prototype/"><span>Try it yourself</span><span class="arr">↗</span></a></div>
+      <p class="demo-note">A scripted preview of the browser prototype. The prototype uses editable example data and fixture checks; no AI model is called.</p>
+    </div>
+  </section>
+
+  <section class="statement" id="statement" data-theme="dark" aria-label="Why Blue Nebula">
+    <div class="shell"><p class="scrub big-scrub" data-scrub>Most AI forgets your project. Blue Nebula keeps its decisions, design, code and checks in one connected workspace, built to run on your own machine.</p></div>
+    <div class="ticker" aria-hidden="true"><div class="ticker-row" id="marquee"><span>Memory</span><span>Design</span><span>Code</span><span>Checks</span><span>Local</span><span>Inspectable</span><span>Portable</span><span>Yours</span><span>Memory</span><span>Design</span><span>Code</span><span>Checks</span><span>Local</span><span>Inspectable</span><span>Portable</span><span>Yours</span></div><div class="ticker-row rev"><span>Remember</span><span>Create</span><span>Build</span><span>Verify</span><span>Review</span><span>Export</span><span>Own</span><span>Remember</span><span>Create</span><span>Build</span><span>Verify</span><span>Review</span><span>Export</span><span>Own</span></div></div>
+  </section>
+
+  <section class="story" id="story" data-theme="dark" aria-label="The four connected layers" data-story>
+    <div class="story-sticky">
+      <canvas id="story-scene" aria-hidden="true"></canvas>
+      
+      <div class="story-copy">
+        <div class="story-step active" style="--c:#3de0b0"><span class="step-no">01 / REMEMBER</span><h3>Memory with a source.</h3><p>Project decisions, conventions and branch context. Cited, scoped and inspectable, so you stop re-explaining.</p><a class="tlink" href="/prototype/?tab=memory">Explore project memory <i>↗</i></a></div>
+        <div class="story-step" style="--c:#78aaff"><span class="step-no">02 / CREATE</span><h3>A canvas you can edit.</h3><p>Shape an interface visually while components and tokens stay connected to the code underneath.</p><a class="tlink" href="/prototype/?tab=canvas">Shape a screen <i>↗</i></a></div>
+        <div class="story-step" style="--c:#aac8ff"><span class="step-no">03 / BUILD</span><h3>Code you can review.</h3><p>Every change arrives as a readable diff. Your intent stays attached to the implementation.</p><a class="tlink" href="/prototype/?tab=code">Inspect the source <i>↗</i></a></div>
+        <div class="story-step" style="--c:#ffb84d"><span class="step-no">04 / VERIFY</span><h3>Evidence, not vibes.</h3><p>Each completed task comes with checks you can open, run and evaluate for yourself.</p><a class="tlink" href="/prototype/?tab=checks">Run the checks <i>↗</i></a></div>
+      </div>
+      <div class="story-nav" id="story-nav" role="group" aria-label="Jump to layer"><button data-i="0" class="active">01 MEMORY</button><button data-i="1">02 DESIGN</button><button data-i="2">03 CODE</button><button data-i="3">04 CHECKS</button></div>
+    </div>
+  </section>
+
+  <section class="light-wrap" data-theme="light">
+    <div class="shell"><div class="panel" id="panel">
+      
+      <p class="scrub panel-scrub" data-scrub>Local by default. Inspectable by design. Every decision has a source, every change a diff, every task its evidence.</p>
+      <div class="panel-stats" id="stats">
+        <div><b><span data-count="4">0</span></b><span>connected layers: memory, design, code and checks</span></div>
+        <div><b><span data-count="3">0</span></b><span>editable starting screens: welcome, dashboard and settings</span></div>
+        <div><b><span data-count="5">0</span></b><span>named fixture checks you can run in the browser</span></div>
+        <div><b><span data-count="0">0</span></b><span>AI or analytics requests made by the browser demo</span></div>
+      </div></div>
+  </section>
+
+
+  <section class="pad paper-lab" id="layers" data-theme="light" aria-labelledby="layers-title">
+    <div class="shell paper-grid">
+      <div>
+        
+        <h2 class="big" id="layers-title">From a visual edit <span class="dim">to a readable change.</span></h2>
+        <p class="lede">A design change should stay connected to its implementation. Pull the layers apart, turn them, and bring one forward.</p>
+        <div class="paper-actions"><a class="btn btn-primary" href="/prototype/"><span>Step inside</span><span class="arr">↗</span></a><button class="pull-btn" id="paper-pull" aria-pressed="false">Pull it apart <span aria-hidden="true">+</span></button></div>
+      </div>
+      <div class="editorial-art" tabindex="0" role="group" aria-label="Interactive model of the workspace layers. Drag to rotate, press space to pull apart.">
+        <div class="art-corner" style="left:0;top:0">+</div><div class="art-corner" style="right:0;top:0">+</div><div class="art-corner" style="left:0;bottom:0">+</div><div class="art-corner" style="right:0;bottom:0">+</div>
+        <div class="sculpture-viewport"><div class="sculpture-stack">
+          <div class="paper-plane paper-memory" aria-hidden="true"><div class="paper-chrome"><span>01 / PROJECT MEMORY</span><b>↗</b></div><h3>A decision.<br>With a source.</h3><div class="paper-memory-line"><i></i><span>Use shared design tokens<small>design-system.md / main</small></span></div><div class="paper-memory-line"><i></i><span>Keep the local workflow intact<small>architecture.md / main</small></span></div><div class="paper-memory-line"><i></i><span>Review before accepting<small>quality.md / main</small></span></div><div class="paper-bottom">CONTEXT THAT CARRIES FORWARD <span>⌘</span></div></div>
+          <div class="paper-plane paper-design" aria-hidden="true"><div class="paper-chrome"><span>02 / EDITABLE CANVAS</span><b>↗</b></div><div class="paper-design-preview"><span class="paper-mini-mark">✳</span><h3>Your next<br>good idea.</h3><span class="paper-sample-button">Start the project <i>↗</i></span></div><div class="paper-ruler"><span>16</span><i></i><span>24</span><i></i><span>32</span><i></i><span>48</span></div><div class="paper-bottom">INTENT, MADE EDITABLE <span>◈</span></div></div>
+          <div class="paper-plane paper-code" aria-hidden="true"><div class="paper-chrome"><span>03 / CONNECTED CODE</span><b>↗</b></div><div class="paper-code-content"><small>src / components / WorkspaceScreen.jsx</small><code><i>export default</i> function Screen() {<br>&nbsp; return (<br>&nbsp;&nbsp; &lt;section style={{<br>&nbsp;&nbsp;&nbsp; gap: <b>16</b>,<br>&nbsp;&nbsp;&nbsp; color: <b>token.accent</b><br>&nbsp;&nbsp; }}&gt;<br>&nbsp;&nbsp;&nbsp; Your next good idea.<br>&nbsp;&nbsp; &lt;/section&gt;<br>&nbsp; );<br>}</code></div><div class="paper-bottom">CHANGES YOU CAN READ <span>⌁</span></div></div>
+          <div class="paper-plane paper-evidence" aria-hidden="true"><div class="paper-chrome"><span>04 / VISIBLE EVIDENCE</span><b>↗</b></div><h3>See what<br>checks out.</h3><div class="paper-check"><i>✓</i><span>Meaningful heading</span><b>PASS</b></div><div class="paper-check"><i>✓</i><span>Layout constraints</span><b>PASS</b></div><div class="paper-check"><i>✓</i><span>Design token binding</span><b>PASS</b></div><div class="paper-check"><i>✓</i><span>Text serialization</span><b>PASS</b></div><div class="paper-bottom">ILLUSTRATIVE CHECK REPORT <span>◎</span></div></div>
+        </div></div>
+        <div class="sculpture-tools"><span>↔ Drag to rotate <i>/</i> Space to pull apart</span><button id="reset-sculpture" aria-label="Reset the interactive model">Reset ↶</button></div>
+        <div class="layer-picker" role="group" aria-label="Bring a workspace layer forward"><button data-paper="0" aria-pressed="false">01 Memory</button><button data-paper="1" aria-pressed="true">02 Design</button><button data-paper="2" aria-pressed="false">03 Code</button><button data-paper="3" aria-pressed="false">04 Checks</button></div>
+        <p class="layer-detail" id="layer-detail" aria-live="polite">Editable objects and shared tokens, connected to their implementation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="uses" data-theme="light" aria-labelledby="uses-title">
+    <div class="shell rail-head"><div><h2 class="big words" id="uses-title" data-words>Proven in the prototype. <span class="dim">Built for real projects.</span></h2></div><div class="rail-ctl"><button id="rail-prev" aria-label="Previous">←</button><button id="rail-next" aria-label="Next">→</button></div></div>
+    <div class="rail-wrap" id="rail-wrap" tabindex="0" aria-label="Use cases, scroll horizontally"><div class="rail" id="rail">
+      <a class="uc" href="/prototype/?tab=memory"><span class="uc-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="uc-arr" aria-hidden="true">↗</span><b>Resume a project with cited decisions.</b><p>Search sample memory, switch branch scope, pin what matters and inspect each source.</p><small>MEMORY</small></a>
+      <a class="uc" href="/prototype/?tab=canvas"><span class="uc-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span><span class="uc-arr" aria-hidden="true">↗</span><b>Edit a screen. Keep the code readable.</b><p>Change heading, spacing, radius and tokens, with generated JSX that follows.</p><small>CANVAS</small></a>
+      <a class="uc" href="/prototype/?tab=code"><span class="uc-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span><span class="uc-arr" aria-hidden="true">↗</span><b>Compare changes with a checkpoint.</b><p>Save a known state, make an edit and inspect the difference before accepting it.</p><small>CODE</small></a>
+      <a class="uc" href="/prototype/?tab=checks"><span class="uc-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></span><span class="uc-arr" aria-hidden="true">↗</span><b>Run named fixture checks.</b><p>See passing and failing states, keep result snapshots and download the evidence.</p><small>CHECKS</small></a>
+      <a class="uc" href="/product/#templates"><span class="uc-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="5" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/></svg></span><span class="uc-arr" aria-hidden="true">↗</span><b>Start from a template.</b><p>Open a welcome screen, project dashboard or workspace settings and make it yours.</p><small>TEMPLATES</small></a>
+      <a class="uc" href="/why-local/"><span class="uc-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></span><span class="uc-arr" aria-hidden="true">↗</span><b>Keep the workflow on your machine.</b><p>The proposal starts with local storage and local inference, with explicit permission for anything else.</p><small>LOCAL-FIRST</small></a>
+      <a class="uc" href="/how-it-works/#scope"><span class="uc-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><span class="uc-arr" aria-hidden="true">↗</span><b>Take the project with you.</b><p>Export versioned project JSON, generated source, tokens, patches and evidence reports.</p><small>PORTABLE</small></a>
+      <a class="uc" href="#roadmap"><span class="uc-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6"/></svg></span><span class="uc-arr" aria-hidden="true">↗</span><b>See where it is going.</b><p>A focused beginning, with each phase subject to validation and no invented dates.</p><small>ROADMAP</small></a>
+    </div></div>
+    <div class="shell"><div class="rail-bar"><i id="rail-prog"></i></div></div>
+  </section>
+
+  <section class="pad shell" id="compare" data-theme="light" aria-labelledby="cmp-title">
+    <h2 class="big words" id="cmp-title" data-words>Not another chat window.</h2>
+    <p class="lede">Most AI coding help starts from a blank conversation. Blue Nebula starts from the project, and shows its work.</p>
+    <div class="cmp reveal" role="table" aria-label="Typical chat-based assistant compared with Blue Nebula">
+      <div role="columnheader"></div><div role="columnheader">Typical chat-based assistant</div><div role="columnheader">Blue Nebula</div>
+      <div class="rowh" role="rowheader">Where project context lives</div><div class="them" role="cell">Sent to a hosted service with each request.</div><div class="us" role="cell">Stays on your machine by default; remote providers only with explicit permission. <span class="pill">Proposed</span></div>
+      <div class="rowh" role="rowheader">What carries over between sessions</div><div class="them" role="cell">Whatever you paste into the next chat.</div><div class="us" role="cell">Project memory: decisions with a source you can search, correct and delete. <span class="pill proto">In prototype</span></div>
+      <div class="rowh" role="rowheader">How changes arrive</div><div class="them" role="cell">A block of generated code to copy across.</div><div class="us" role="cell">A readable diff you can compare with a checkpoint. <span class="pill proto">In prototype</span></div>
+      <div class="rowh" role="rowheader">Design and code</div><div class="them" role="cell">Separate tools, reconciled by hand.</div><div class="us" role="cell">One canvas editing shared tokens that stay connected to the code. <span class="pill proto">In prototype</span></div>
+      <div class="rowh" role="rowheader">Proof that it worked</div><div class="them" role="cell">The assistant says it did.</div><div class="us" role="cell">Named checks you can open, run and inspect. <span class="pill proto">In prototype</span></div>
+      <div class="rowh" role="rowheader">Without a connection</div><div class="them" role="cell">Usually needs one.</div><div class="us" role="cell">Offline after installation. <span class="pill">Proposed</span></div>
+    </div>
+    <p class="cmp-note">A general comparison; individual tools vary. Green labels mark what the browser prototype demonstrates today with sample data. Everything else is a proposal.</p>
+  </section>
+
+  <section class="pad shell" id="playground" data-theme="light" aria-labelledby="play-title">
+    
+    <h2 class="big words" id="play-title" data-words>Run the workflow. <span class="dim">Right here.</span></h2>
+    <p class="lede reveal">Pick a prompt, press run, then change the heading, accent and spacing and watch the generated code follow.</p>
+    <div class="play reveal">
+      <div class="term">
+        <div class="bar"><i></i><i></i><i></i><span>acme / next-chapter · main</span></div>
+        <form class="prompt" id="prompt-form"><input id="prompt" aria-label="Prompt" value="Build a welcome screen using our project conventions." maxlength="90"><button class="btn btn-primary btn-sm" id="run" type="submit"><span>Run</span><span class="arr">▷</span></button></form>
+        <div class="chips" id="chips"><button class="chip" type="button">Build a pricing card</button><button class="chip" type="button">Add a settings panel</button><button class="chip" type="button">Create an onboarding step</button></div>
+        <div class="steps" id="steps"><div class="step"><b>01</b>Recall context</div><div class="step"><b>02</b>Shape canvas</div><div class="step"><b>03</b>Review code</div><div class="step"><b>04</b>Run checks</div></div>
+        <div class="log" id="log" role="log" aria-live="polite"><div>› Waiting for a prompt. Press <span class="hl">Run</span>.</div></div>
+      </div>
+      <div class="preview">
+        <div class="bar"><i></i><i></i><i></i><span>live preview · WelcomeCard</span></div>
+        <div class="preview-body"><div class="mock" id="mock"><small>YOUR NEXT CHAPTER</small><h4 id="mock-title">Make space for great work.</h4><p>Your ideas have a place to grow.</p><button type="button" id="mock-btn">Open your project ↗</button></div></div>
+        <div class="controls">
+          <label>Heading <input type="text" id="heading" value="Make space for great work." maxlength="60" aria-label="Heading"></label>
+          <label>Accent <span class="swatches" id="swatches" role="group" aria-label="Accent color"><button type="button" aria-label="Blue" aria-pressed="true" data-c="#4d8dff" style="background:#4d8dff"></button><button type="button" aria-label="Violet" aria-pressed="false" data-c="#8b6bff" style="background:#8b6bff"></button><button type="button" aria-label="Mint" aria-pressed="false" data-c="#3de0b0" style="background:#3de0b0"></button><button type="button" aria-label="Amber" aria-pressed="false" data-c="#ffb84d" style="background:#ffb84d"></button></span></label>
+          <label>Spacing <input type="range" id="gap" min="8" max="32" step="4" value="16" aria-label="Spacing"><output id="gap-out">16px</output></label>
+        </div>
+      </div>
+    </div>
+    <p class="note">A guided illustration: no model calls, no repository access. <a href="/prototype/" style="color:var(--blue)">Open the full prototype ↗</a></p>
+  </section>
+
+
+  <section class="pad shell" id="hardware" data-theme="light" aria-labelledby="hw-title">
+    <div class="hw">
+      <div>
+        
+        <h2 class="big words" id="hw-title" data-words>Intelligence, sized for your machine.</h2>
+        <p class="lede">Drag the slider through the proposed hardware profiles. Final support depends on model qualification.</p>
+        <div class="hw-slider"><label for="ram">YOUR SYSTEM MEMORY <output id="ram-out">32 GB RAM</output></label><input type="range" id="ram" min="0" max="2" step="1" value="1"><div class="ticks"><span>16 GB</span><span>32 GB</span><span>64 GB</span></div></div>
+      </div>
+      <div class="chip3d tilt" id="hw-card">
+        <span class="kick" id="hw-tag">H1 · REFERENCE INFERENCE</span>
+        <h4 id="hw-name">Your personal engineering engine</h4>
+        <p id="hw-desc"></p>
+        <div class="meter-label"><span>LOCAL MODEL HEADROOM</span><span id="hw-pct">60%</span></div>
+        <div class="meter" style="margin-top:10px"><i id="hw-meter"></i></div>
+        <div class="specs"><div><small>COMPUTE</small><b id="hw-compute">12 GB NVIDIA VRAM</b></div><div><small>STORAGE</small><b id="hw-disk">30 GB free · NVMe</b></div></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="pad shell" id="why-now" data-theme="light" aria-labelledby="why-title">
+    <h2 class="big words" id="why-title" data-words>Why this, and why now.</h2>
+    <div class="why3 reveal">
+      <div><i>01</i><h3>Compact code models can run on one consumer GPU.</h3><p>Which of them is good enough for real project work is exactly what this proposal says must be qualified through trials, not assumed.</p></div>
+      <div><i>02</i><h3>People re-explain their project every session.</h3><p>Decisions, conventions and constraints live in heads and old threads. Memory with a source turns them into something you can inspect and correct.</p></div>
+      <div><i>03</i><h3>Teams ask where their code goes.</h3><p>Keeping project data on the machine by default removes a whole class of questions. Anything remote would be opt-in, per project.</p></div>
+    </div>
+    <div class="why-foot"><p>Starting narrow on purpose: Windows 11, VS Code, React with TypeScript. Each layer expands only once it can be checked.</p><a href="#roadmap">See the roadmap →</a></div>
+  </section>
+
+  <section class="pad" id="roadmap" data-theme="light" aria-labelledby="road-title">
+    <div class="shell">
+      
+      <h2 class="big words" id="road-title" data-words>A focused beginning. <span class="dim">An expansive horizon.</span></h2>
+      <p class="lede">Capability follows evidence, one complete workflow at a time.</p>
+    </div>
+    <div class="road-wrap" id="road-wrap" tabindex="0" aria-label="Roadmap, scroll horizontally">
+      <div class="road" id="road">
+        <div class="rm"><div class="inner"><small>PHASE 01 / FOUNDATION</small><h3>A personal workspace</h3><p>Local model trials, cited project memory, an editable canvas and reviewable code.</p><em>Proposed MVP scope</em></div></div>
+        <div class="rm"><div class="inner"><small>PHASE 02 / CONNECTION</small><h3>A tighter creative loop</h3><p>Scoped code-to-canvas updates, portable projects and qualified desktop adapters.</p><em>Subject to validation</em></div></div>
+        <div class="rm"><div class="inner"><small>PHASE 03 / COLLABORATION</small><h3>Context worth sharing</h3><p>Explicit project sharing, review roles and team coordination built around local ownership.</p><em>Future direction</em></div></div>
+        <div class="rm"><div class="inner"><small>PHASE 04 / ADAPTATION</small><h3>Progress you can measure</h3><p>Separately consented adapter experiments, held-out evaluation and reversible promotion.</p><em>Research dependent</em></div></div>
+      </div>
+    </div>
+    <div class="shell"><p class="hint">← Drag or scroll sideways. A product proposal, not a delivery commitment. No release dates or measured outcomes have been established.</p></div>
+  </section>
+
+
+  <section class="pad shell" id="faq" data-theme="light" aria-labelledby="faq-title">
+    <div class="faq">
+      <div><h2 class="big words" id="faq-title" data-words>Good questions.</h2><a class="btn btn-ghost magnetic" href="/product-brief.md" download="Blue-Nebula-Product-Brief.md"><span>Take the product brief</span><span class="arr">↓</span></a></div>
+      <div>
+        <details><summary>What exactly is Blue Nebula?<i></i></summary><div class="ans"><div><p>The working name for a proposed local-first AI engineering workspace. It connects a repository, visual canvas, persistent project memory, local models and visible verification. It is an application layer, not an operating system kernel.</p></div></div></details>
+        <details><summary>Can I download the desktop app today?<i></i></summary><div class="ans"><div><p>No. This site presents the product vision and an interactive browser concept. The downloadable brief explains the proposed scope, hardware assumptions and roadmap.</p></div></div></details>
+        <details><summary>Does this demo call an AI model?<i></i></summary><div class="ans"><div><p>No. The demo uses editable example data and deterministic stages. Everything runs in your browser. It does not index a repository, execute generated code or connect to a local model.</p></div></div></details>
+        <details><summary>Will my projects need a cloud connection?<i></i></summary><div class="ans"><div><p>The proposal is local storage and inference by default, with an offline supported workflow after installation. Optional remote providers would require explicit permission. These are requirements awaiting implementation.</p></div></div></details>
+        <details><summary>Which tools and machines are in scope?<i></i></summary><div class="ans"><div><p>The proposed starting point is Windows 11 x64, VS Code and React with TypeScript. A 32 GB RAM system with 12 GB NVIDIA VRAM is the reference inference profile; a 16 GB CPU profile is best effort.</p></div></div></details>
+        <details><summary>How is memory different from training?<i></i></summary><div class="ans"><div><p>Project memory keeps inspectable facts outside model weights, where they can be corrected or deleted. Optional adapter training is a later, separately consented capability. Saving a memory does not train a model.</p></div></div></details>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="cta-dark" data-theme="dark" aria-labelledby="cta-title">
+    <canvas id="cta-ribbon" aria-hidden="true"></canvas>
+    <div class="cta-grid" aria-hidden="true"></div>
+    <div class="shell"><h2 id="cta-title">Your next chapter.<br>A whole new orbit.</h2><div class="hero-actions"><a class="btn btn-primary magnetic" href="/prototype/"><span>Open the prototype</span><span class="arr">↗</span></a><a class="btn btn-ghost magnetic" href="/how-it-works/"><span>How it works</span><span class="arr">↗</span></a></div></div>
+  </section>
+</main>
+
+<footer data-theme="dark">
+  <div class="shell">
+    <div class="foot">
+      <div><a class="brand" href="/"><span class="logo-crop"><img src="/logo.png" width="200" height="200" alt="Blue Nebula"></span></a><p>A local-first AI workspace.<br>Built around your project.</p></div>
+      <div><h5>PRODUCT</h5><a href="/product/">Overview</a><a href="/prototype/">Interactive prototype</a><a href="/product/#development">Development status</a></div>
+      <div><h5>EXPLORE</h5><a href="/how-it-works/">How it works</a><a href="/why-local/">Why local</a><a href="/why-local/#hardware">Hardware guide</a></div>
+      <div><h5>RESOURCES</h5><a href="/product/#faq">Questions &amp; answers</a><a href="/why-local/#boundaries">Ownership principles</a><a href="/product-brief.md" download="Blue-Nebula-Product-Brief.md">Download the brief ↓</a></div>
+    </div>
+    <div class="legal"><span>© 2026 Blue Nebula. In development.</span><button id="motion-toggle" aria-pressed="false">Pause graphics Ⅱ</button></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><style>.reveal,.words .w,.sw{opacity:1!important;transform:none!important}.cine h1 .line>span{transform:none!important;animation:none!important}.story{height:auto}.story-sticky{position:static;height:auto}.story-step{position:static;opacity:1;transform:none;margin-bottom:40px}.story-copy{position:static}</style></noscript>
+</body>
+</html>

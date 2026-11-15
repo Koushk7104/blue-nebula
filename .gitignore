@@ -1,0 +1,7 @@
+node_modules/
+artifacts/
+*.tar.gz
+*.zip
+*.log
+/.openai/
+/.vercel/

@@ -1,0 +1,46 @@
+/* Prototype studio — aligned with the site's scale.css look. Loaded after the legacy layers; visual only. */
+.prototype-page,.studio-dialog{--ink:#0b1220;--mute:#5b667a;--line:rgba(10,20,40,.1);--blue:#4d8dff;--ease:cubic-bezier(.16,1,.3,1);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.prototype-page{background:#fbfcfe}
+.studio-dialog,.studio-body,.studio-workspace-shell,.studio-header{background:#fbfcfe;color:var(--ink)}
+.studio-header{border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.studio-dialog[open]{animation:pp-in .6s var(--ease)}
+@keyframes pp-in{from{opacity:0;transform:translateY(16px)}}
+
+/* surfaces */
+.app-rail,.project-sidebar,.canvas-inspector,.workspace-main{border-color:var(--line)}
+.app-rail,.project-sidebar{background:#fff}
+.panel-toolbar,.app-view-header,.workbench-title{border-color:var(--line)}
+.canvas-stage{background-color:#f1f4f9;background-image:radial-gradient(rgba(10,20,40,.12) 1px,transparent 1px);background-size:20px 20px}
+.design-card{box-shadow:0 30px 60px -30px rgba(10,20,40,.45);transition:transform .5s var(--ease)}
+.design-card:hover{transform:translateY(-4px)}
+.canvas-inspector{background:#fff}
+
+/* controls */
+.studio-dialog .button,.studio-dialog .button-small,.studio-dialog .run-checks{border-radius:99px;background:var(--ink);color:#fff;border:0;font-weight:600;transition:transform .25s var(--ease),background .3s}
+.studio-dialog .button:hover,.studio-dialog .run-checks:hover{background:var(--blue);transform:translateY(-2px)}
+.studio-dialog .button:active{transform:none}
+.studio-dialog button:not(.button):not(.button-small):not(.run-checks){transition:background .2s,color .2s,border-color .2s,transform .25s var(--ease)}
+.studio-dialog input[type=text],.studio-dialog input:not([type]),.studio-dialog textarea,.studio-dialog select,.studio-dialog input[type=search]{border:1px solid rgba(10,20,40,.17);border-radius:10px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.studio-dialog input:focus,.studio-dialog textarea:focus,.studio-dialog select:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 4px rgba(77,141,255,.18)}
+.studio-dialog :focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.studio-dialog input[type=range]{accent-color:var(--blue)}
+.sidebar-item,.workspace-tabs button{border-radius:10px;transition:background .25s var(--ease),color .2s,transform .25s var(--ease)}
+.sidebar-item:hover,.workspace-tabs button:hover{background:rgba(77,141,255,.08);transform:translateX(3px)}
+.sidebar-item.active{background:rgba(77,141,255,.12);color:#1f5fd6}
+.swatch{transition:transform .25s var(--ease)}.swatch:hover{transform:scale(1.2)}
+.memory-record{border:1px solid var(--line);border-radius:14px;background:#fff;transition:transform .35s var(--ease),border-color .3s,box-shadow .35s}
+.memory-record:hover{transform:translateY(-3px);border-color:rgba(77,141,255,.5);box-shadow:0 18px 40px -24px rgba(40,80,200,.35)}
+.check-results>*{animation:pp-row .45s var(--ease) both}
+@keyframes pp-row{from{opacity:0;transform:translateX(-10px)}}
+.eval-ring{transition:transform .5s var(--ease)}.eval-ring:hover{transform:scale(1.05) rotate(-4deg)}
+.demo-command{border-top:1px solid var(--line);background:#fff}
+.workflow-progress span{transition:color .3s,background .3s}
+.mini-tag,.template-label{border-radius:99px}
+.code-wrap{border-radius:14px}
+
+/* progress line + scrollbars */
+.studio-dialog ::-webkit-scrollbar{width:10px;height:10px}
+.studio-dialog ::-webkit-scrollbar-thumb{background:rgba(10,20,40,.18);border-radius:10px;border:2px solid transparent;background-clip:content-box}
+.studio-dialog ::-webkit-scrollbar-thumb:hover{background:rgba(77,141,255,.6);background-clip:content-box}
+@media (prefers-reduced-motion:reduce){.studio-dialog[open],.check-results>*{animation:none}}

@@ -1,0 +1,7 @@
+{
+  "name": "blue-nebula-landing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build-pages.mjs", "dev": "node server.mjs", "start": "node server.mjs", "test": "node --test" }
+}

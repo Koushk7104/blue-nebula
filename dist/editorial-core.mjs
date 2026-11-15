@@ -1,0 +1,3 @@
+import { clamp01,smooth } from './motion-core.mjs';
+export function storyProgress(offset,travel,staticLayout=false){return staticLayout||travel<=0?0:clamp01(offset/travel);}
+export function sculptureLayout(raw,expanded=false,selected=1){const p=clamp01(raw),spread=Math.max(expanded?1:0,smooth(.12,.6,p)),grid=smooth(.68,1,p),spacing=18+spread*65;return {progress:p,grid,pitch:50*(1-grid),yaw:-32*(1-grid),layers:Array.from({length:4},(_,i)=>({x:(i%2?145:-145)*grid,y:(i<2?-105:105)*grid,z:(i===selected?1.5*spacing+45:(i-1.5)*spacing)*(1-grid),scale:1-grid*.42,opacity:grid>.7||i===selected?1:.6}))};}
